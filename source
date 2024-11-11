@@ -207,7 +207,7 @@ Title.BorderSizePixel = 0
 Title.Size = UDim2.new(0, 250, 0, 20)
 Title.Font = Enum.Font.SourceSans
 Title.TextSize = 18
-Title.Text = "Infinite Yield FE v" .. currentVersion
+Title.Text = "Infinite Yield Admin Commands v" .. currentVersion
 
 do
 	local emoji = ({
@@ -6278,7 +6278,7 @@ local TeleportCheck = false
 Players.LocalPlayer.OnTeleport:Connect(function(State)
 	if KeepInfYield and (not TeleportCheck) and queueteleport then
 		TeleportCheck = true
-		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()")
+		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Exteriact/Infinite-Yield/refs/heads/master/source'))()")
 	end
 end)
 
@@ -6322,14 +6322,6 @@ addcmd('clraliases',{},function(args, speaker)
 	updatesaves()
 	refreshaliases()
 end)
-
-addcmd('discord', {'support', 'help'}, function(args, speaker)
-	if everyClipboard then
-		toClipboard('https://discord.com/invite/dYHag43eeU')
-		notify('Discord Invite', 'Copied to clipboard!\ndiscord.gg/dYHag43eeU')
-	else
-		notify('Discord Invite', 'discord.gg/dYHag43eeU')
-	end
 	if httprequest then
 		httprequest({
 			Url = 'http://127.0.0.1:6463/rpc?v=1',
